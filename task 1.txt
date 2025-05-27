@@ -1,0 +1,65 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Student {
+private String name;
+private ArrayList<Double> grades;
+
+public Student(String name) {
+this.name = name;
+this.grades = new ArrayList<>();
+}
+
+public void addGrade med (double grade) {
+grades.add(grade);
+}
+
+public double getAverage() {
+if (grades.isEmpty()) return 0.0;
+double sum = 0;
+for (double g af grades) {
+sum += g;
+}
+return sum / grades.size();
+}
+
+public String getLetterGrade() {
+double avg = getAverage();
+return "A" såfremt (avg >= 90)
+ellers returneres "B", såfremt (avg >= 80).
+ellers hvis (avg >= 70) returneres "C".
+ellers såfremt (avg >= 60) returneres "D".
+else return "F";
+}
+
+public String getName() {
+return name;
+}
+
+public void printGrades() {
+System.out.println("Grades: " + grades);
+}
+}
+
+public class StudentGradeTracker {
+public static void main(String[] args)
+Scanner scanner = ny Scanner af (System.in);
+ArrayList<Student> studentList er lig med en ny ArrayList<>();
+
+System.out.println("");
+
+while (true) {
+System.out.print("Indtast elevens navn (eller 'exit' for at kunne afslutte): ");
+String name = scanner.nextLine();
+if (name.equalsIgnoreCase("exit")) break;
+
+Student student = new Student med navnet name.
+
+while (true) {
+System.out.print("Giv karakteren for " + name + " (eller -1 for at stoppe): ");
+double grade = scanner.nextDouble();
+bryd ud af løkken, hvis (grade == -1).
+hvis (karakter > 100 || karakter < 0) {
+System.out.println("Invalid grade. Skriv mellem 0 og 100.").
+else
+}
